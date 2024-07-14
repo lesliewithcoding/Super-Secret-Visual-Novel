@@ -4,36 +4,36 @@
 init python: 
     def callbackSal (event, **kwargs):
         if event == "show":
-            renpy.music.play("male_standard_1.ogg", channel="sound", loop=True)
-            renpy.music.play("male_standard_2.ogg", channel="sound", loop=True)
+            renpy.music.play("voices/male_standard_1.ogg", channel="sound", loop=True)
+            renpy.music.play("voices/male_standard_2.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
 
 init python: 
     def callbackAxe (event, **kwargs):
         if event == "show":
-            renpy.music.play("quick_3.ogg", channel="sound", loop=True)
+            renpy.music.play("voices/quick_3.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
 
 init python: 
     def callbackRazz (event, **kwargs):
         if event == "show":
-            renpy.music.play("demon_1.ogg", channel="sound", loop=True)
+            renpy.music.play("voices/demon_1.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
 
 init python: 
     def callbackJJ (event, **kwargs):
         if event == "show":
-            renpy.music.play("robot_2.ogg",channel="sound", loop=True)
+            renpy.music.play("voices/robot_2.ogg",channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
 init python: 
     def callbackRoh (event, **kwargs):
         if event == "show":
-            renpy.music.play("male_deep_4.ogg", channel="sound", loop=True)
+            renpy.music.play("voices/male_deep_4.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
    
@@ -53,11 +53,12 @@ label start:
     D&D High was not an easy choice"
 
 label test: 
+    play music "audio/since_2_a.m.mp3" volume 0.4
     narr "{color=#f7ad57ff} test {/color}"
 
     j "My name is John...{p=0.5}Jameston John, {p=1.0}At your service."
 
-    r "{size=70} WHO CARES!!!{/sze} {p=0.3}My name is more important!"
+    r "{size=70}WHO CARES!!!{/sze} {p=0.3}My name is more important!"
     r "It's Razz nyehehe..."
 
     a "I'm Axe !!!!!!"

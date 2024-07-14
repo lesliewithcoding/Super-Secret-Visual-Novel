@@ -1,17 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 27, in script
-    j "My name is John, Jameston John.... {p=1.0}At your service."
-  File "game/script.rpy", line 8, in callbackJJ
-    renpy.music.play("robot_2.ogg",channel="sounds", loop = False)
-Exception: Audio channel 'sounds' is unknown.
+  File "game/script.rpy", line 59, in script
+    j "My name is John...{p=0.5}Jameston John, {p=1.0}At your service."
+OSError: Couldn't find file 'robot_2.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 27, in script
-    j "My name is John, Jameston John.... {p=1.0}At your service."
+  File "game/script.rpy", line 59, in script
+    j "My name is John...{p=0.5}Jameston John, {p=1.0}At your service."
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
     Say.execute(self)
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
@@ -22,17 +20,30 @@ Full traceback:
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\character.py", line 1045, in do_display
     display_say(who,
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\character.py", line 632, in display_say
-    c("show", interact=interact, type=type, **cb_args)
-  File "game/script.rpy", line 8, in callbackJJ
-    renpy.music.play("robot_2.ogg",channel="sounds", loop = False)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\music.py", line 103, in play
-    c = get_channel(channel)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 922, in get_channel
-    raise Exception("Audio channel %r is unknown." % name)
-Exception: Audio channel 'sounds' is unknown.
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 3026, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1199, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1177, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1119, in periodic_pass
+    c.periodic()
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 528, in periodic
+    topf = load(filename)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'robot_2.ogg'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Pathfinding My Way To Your Heart 1.0
-Sun Jul 14 01:06:34 2024
+Sun Jul 14 01:47:36 2024
