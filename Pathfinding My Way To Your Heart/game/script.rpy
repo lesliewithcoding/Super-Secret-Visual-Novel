@@ -1,33 +1,77 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# Callbacks for Text Voice
+init python: 
+    def callbackSal (event, **kwargs):
+        if event == "show":
+            renpy.music.play("male_standard_1.ogg", channel="sound", loop=True)
+            renpy.music.play("male_standard_2.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel = "sound")
 
-define e = Character("Eileen")
+init python: 
+    def callbackAxe (event, **kwargs):
+        if event == "show":
+            renpy.music.play("quick_3.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel = "sound")
 
+init python: 
+    def callbackRazz (event, **kwargs):
+        if event == "show":
+            renpy.music.play("demon_1.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel = "sound")
+
+init python: 
+    def callbackJJ (event, **kwargs):
+        if event == "show":
+            renpy.music.play("robot_2.ogg",channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
+init python: 
+    def callbackRoh (event, **kwargs):
+        if event == "show":
+            renpy.music.play("male_deep_4.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel = "sound")
+   
+
+define s = Character("Salmon", color="#fcc203", callback=callbackSal)
+define a = Character("Axe", color="#00c90a", callback=callbackAxe)
+define r = Character("Razz", color="#858585", callback=callbackRazz)
+define j = Character("John Jameston John", color="#00b9c9", callback=callbackJJ)
+define roh = Character("Rohan", color="#8dab4b", callback=callbackRoh)
+
+define narr = Character(color="#f7ad57ff")
 
 # The game starts here.
 
 label start:
+    narr "Transferring to Pathfind High after your freshman year in 
+    D&D High was not an easy choice"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+label test: 
+    narr "{color=#f7ad57ff} test {/color}"
 
-    scene bg room
+    j "My name is John...{p=0.5}Jameston John, {p=1.0}At your service."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    r "{size=70} WHO CARES!!!{/sze} {p=0.3}My name is more important!"
+    r "It's Razz nyehehe..."
 
-    show eileen happy
+    a "I'm Axe !!!!!!"
 
-    # These display lines of dialogue.
+    s "And I'm Salmon. It's nice to meet you."
 
-    e "You've created a new Ren'Py game."
+    a "And I'm Axe !!!!!!!!!!!!!!!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    narr "Salmon smiles at Axe."
 
-    # This ends the game.
+    s "You already said that Axe."
+
+    a " I know, I just wanted to say it again hehehe!!!"
+
+    roh "Hello, my name is Rohan. Pleasure to meet you."
 
     return
