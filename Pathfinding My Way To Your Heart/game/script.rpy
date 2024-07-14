@@ -44,6 +44,10 @@ init python:
             renpy.music.play("voices/narr/Single Keys/keypress-012.wav",channel="sound",loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
+
+# Temp Image Sprites
+image axe = "temp/axe neutral.png"
+image sal = "temp/salmon neutral.png"
    
 # Character Establishment: Names, Color Hex, and Voice Sounds
 
@@ -70,8 +74,11 @@ label test:
     r "{size=70}WHO CARES!!!{/sze} {p=0.3}My name is more important!"
     r "It's Razz nyehehe..."
 
+    show axe at left
+
     a "I'm Axe !!!!!!"
 
+    show sal at right
     s "And I'm Salmon. It's nice to meet you."
 
     a "And I'm Axe !!!!!!!!!!!!!!!"
@@ -82,6 +89,8 @@ label test:
 
     a " I know, I just wanted to say it again hehehe!!!"
 
+    hide sal
+    hide axe
     roh "Hello, my name is Rohan. Pleasure to meet you."
 
     return
