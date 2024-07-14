@@ -36,6 +36,14 @@ init python:
             renpy.music.play("voices/male_deep_4.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
+
+init python: 
+    def callbackNarr (event, **kwargs):
+        if event == "show":
+            renpy.music.play("voices/narr/Single Keys/keypress-013.wav", channel="sound",loop=True)
+            renpy.music.play("voices/narr/Single Keys/keypress-012.wav",channel="sound",loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel = "sound")
    
 # Character Establishment: Names, Color Hex, and Voice Sounds
 
@@ -45,7 +53,7 @@ define r = Character("Razz", color="#858585", callback=callbackRazz)
 define j = Character("John Jameston John", color="#00b9c9", callback=callbackJJ)
 define roh = Character("Rohan", color="#8dab4b", callback=callbackRoh)
 
-define narr = Character(color="#f7ad57ff")
+define narr = Character(color="#f7ad57ff", callback=callbackNarr)
 
 # The game starts here.
 

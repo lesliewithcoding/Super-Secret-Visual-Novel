@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 59, in script
-    j "My name is John...{p=0.5}Jameston John, {p=1.0}At your service."
-OSError: Couldn't find file 'robot_2.ogg'.
+  File "game/script.rpy", line 60, in script
+    narr "Transferring to Pathfind High after your freshman year in
+OSError: Couldn't find file 'voices/narr/eklee-KeyPressMac06.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 59, in script
-    j "My name is John...{p=0.5}Jameston John, {p=1.0}At your service."
+  File "game/script.rpy", line 60, in script
+    narr "Transferring to Pathfind High after your freshman year in
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
     Say.execute(self)
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
@@ -41,9 +41,9 @@ Full traceback:
     rv = renpy.loader.load(fn, directory="audio")
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\loader.py", line 672, in load
     raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'robot_2.ogg'.
+OSError: Couldn't find file 'voices/narr/eklee-KeyPressMac06.ogg'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Pathfinding My Way To Your Heart 1.0
-Sun Jul 14 01:47:36 2024
+Sun Jul 14 11:45:13 2024
