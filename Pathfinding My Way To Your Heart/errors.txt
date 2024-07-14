@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6: invalid syntax
-    define callback(event, **kwargs):
-            ^
+File "game/script.rpy", line 71: expected statement.
+    renpy.music.stop(channel="music")
+                                     ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sun Jul 14 00:52:02 2024
+Sun Jul 14 11:12:41 2024

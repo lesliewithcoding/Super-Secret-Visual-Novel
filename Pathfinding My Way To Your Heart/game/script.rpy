@@ -37,6 +37,7 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel = "sound")
    
+# Character Establishment: Names, Color Hex, and Voice Sounds
 
 define s = Character("Salmon", color="#fcc203", callback=callbackSal)
 define a = Character("Axe", color="#00c90a", callback=callbackAxe)
