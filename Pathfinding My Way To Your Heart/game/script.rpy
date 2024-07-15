@@ -94,7 +94,7 @@ label intro:
     rain "Ah, welcome, you must be new here, yes?"
     rain "My name is Severina Raine but you can just call me Professor Raine."
     rain "Please, have a seat, I was just discussing who shall be paired with 
-    \nwho for the new project that is due in 3 days."
+    who for the new project that is due in 3 days."
     rain "You can sit with...{p=0.5}Over there-"
 
     narr "She points to a group of 5 individuals, {p=0.1}
@@ -116,4 +116,8 @@ label intro:
     with dissolve
 
     r "Whatchu starin' at?!"
+
+    show sal at right
+
+    s "huh?"
     return
