@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 71: expected statement.
-    renpy.music.stop(channel="music")
-                                     ^
+File "game/script.rpy", line 103: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    narr "{i}""No way the new kid is going to stand those five!""\n{p=0.1} 
+              ^
+        ""They’ll pull their hair out before the class ends with how those five are"" {/i}"
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sun Jul 14 11:12:41 2024
+Sun Jul 14 20:37:26 2024

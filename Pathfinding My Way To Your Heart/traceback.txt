@@ -1,49 +1,82 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 60, in script
-    narr "Transferring to Pathfind High after your freshman year in
-OSError: Couldn't find file 'voices/narr/eklee-KeyPressMac06.ogg'.
+Exception: Could not find font 'gui/fonts/VCR_OSD_MONO_1001.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 60, in script
-    narr "Transferring to Pathfind High after your freshman year in
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
-    Say.execute(self)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\exports.py", line 1494, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\character.py", line 1394, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\character.py", line 1045, in do_display
-    display_say(who,
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\character.py", line 741, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 3026, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1199, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1177, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 1119, in periodic_pass
-    c.periodic()
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 528, in periodic
-    topf = load(filename)
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\audio\audio.py", line 72, in load
-    rv = renpy.loader.load(fn, directory="audio")
-  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\loader.py", line 672, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'voices/narr/eklee-KeyPressMac06.ogg'.
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 2819, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\core.py", line 1353, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1121, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\behavior.py", line 968, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1314, in render
+    xminimum = max(xminimum, size_groups[size_group].width(width, height, st, at))
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1251, in width
+    rend = renpy.display.render.render_for_size(i, width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\behavior.py", line 968, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\display\layout.py", line 1361, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\text\text.py", line 2276, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\text\text.py", line 676, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\text\text.py", line 268, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample, self.shaper, self.instance, self.axis)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\text\font.py", line 745, in get_font
+    face = load_face(fn, shaper)
+  File "C:\Users\lesli\OneDrive\Desktop\renpy-8.2.3-sdk\renpy\text\font.py", line 673, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'gui/fonts/VCR_OSD_MONO_1001.ttf'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
 Pathfinding My Way To Your Heart 1.0
-Sun Jul 14 11:45:13 2024
+Sun Jul 14 20:57:41 2024
