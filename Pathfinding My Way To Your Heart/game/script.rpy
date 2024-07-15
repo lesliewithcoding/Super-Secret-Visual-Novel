@@ -112,9 +112,6 @@ label intro:
     narr "A frog and a fog-like person, a snake and a robot, and a giant goloma." 
     narr "You’ve never seen a goloma before."
 
-    show sal
-    with dissolve
-
     r "Whatchu starin' at?!"
 
     show sal at right
