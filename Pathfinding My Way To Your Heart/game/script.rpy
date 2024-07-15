@@ -70,7 +70,7 @@ define j = Character("John Jameston John", color="#00b9c9", callback=callbackJJ)
 define roh = Character("Rohan", color="#8dab4b", callback=callbackRoh)
 define rain = Character("Prof. Raine",color = "#6c84a4",callback=callbackRain)
 
-define narr = Character(color="#f7ad57ff", callback=callbackNarr)
+define narr = Character(callback=callbackNarr)
 
 # The game starts here.
 
@@ -85,6 +85,7 @@ label start:
     \nschool with mostly humanoid to hardly any is a dramatic change."
     narr"Especially since Principal A informed you that you are the only human in the school."
     narr"But, that doesn’t stop you from going through the entrance."
+
 label intro:
     scene bg classroom
     narr "After a bit of trouble navigating the school hallways, 
@@ -115,6 +116,6 @@ label intro:
     r "Whatchu starin' at?!"
 
     show sal at right
-
+    
     s "huh?"
     return
