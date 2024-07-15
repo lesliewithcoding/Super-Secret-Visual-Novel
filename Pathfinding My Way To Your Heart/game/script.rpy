@@ -53,11 +53,13 @@ init python:
             renpy.music.stop(channel = "sound")
 
 # Temp Background
+image black = "#000"
 image bg school = "temp/bg school.png"
 image bg classroom = "temp/bg classroom.jpg"
+
 # Temp Image Sprites
-image axe = "temp/chara/base_00008.png"
-image sal = "temp/chara/base_00006.png"
+
+image sal = "temp/chara/temp salmon.png"
    
 # Character Establishment: Names, Color Hex, and Voice Sounds
 
@@ -109,6 +111,9 @@ label intro:
     narr "Taking a look at your new groupmates. They seem to be an interesting bunch."
     narr "A frog and a fog-like person, a snake and a robot, and a giant goloma." 
     narr "You’ve never seen a goloma before."
+
+    show sal
+    with dissolve
 
     r "Whatchu starin' at?!"
     return
