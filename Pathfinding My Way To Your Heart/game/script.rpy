@@ -66,7 +66,7 @@ image sal = "temp/chara/temp salmon.png"
 define s = Character("Salmon", color="#fcc203", callback=callbackSal)
 define a = Character("Axe", color="#00c90a", callback=callbackAxe)
 define r = Character("Razz", color="#858585", callback=callbackRazz)
-define j = Character("John Jameston John", color="#00b9c9", callback=callbackJJ)
+define j = Character("Jameston John", color="#00b9c9", callback=callbackJJ)
 define roh = Character("Rohan", color="#8dab4b", callback=callbackRoh)
 define rain = Character("Prof. Raine",color = "#6c84a4",callback=callbackRain)
 
